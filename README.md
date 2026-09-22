@@ -4,7 +4,7 @@ Relatório técnico interativo de gestão de resíduos sólidos para o 58º Cong
 
 ## 🌐 Visualizar Online
 
-Acesse o relatório em: **[GitHub Pages](#)** *(link será atualizado após deploy)*
+Acesse o relatório em: **[https://marckmalhado.github.io/congresso-patologia-residuos-2026/](https://marckmalhado.github.io/congresso-patologia-residuos-2026/)**
 
 ## 📋 Conteúdo
 
