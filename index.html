@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Gestão de Resíduos — 58º Congresso Brasileiro de Patologia Clínica 2026</title>
+  <meta name="description" content="Relatório de Gestão de Resíduos do 58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial 2026, realizado em Florianópolis.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVEGAÇÃO STICKY
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="header-logos">
+        <img src="assets/ecosane-logo.png" alt="Ecosane Projetos Ambientais" class="header-logo-img">
+      </div>
+
+      <nav class="main-nav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#indicadores" class="nav-link">Indicadores</a>
+        <a href="#destinacao" class="nav-link">Resíduos</a>
+        <a href="#etapas" class="nav-link">Etapas</a>
+        <a href="#caracterizacao" class="nav-link">Caracterização</a>
+        <a href="#triagem" class="nav-link">Triagem</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#recomendacoes" class="nav-link">Recomendações</a>
+      </nav>
+
+      <button id="btnPrint" class="btn-print" title="Imprimir Relatório em PDF">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+          <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 4v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2h8z"/>
+        </svg>
+        Imprimir / PDF
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO / CAPA
+         ========================================================================== -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-group">
+            <span class="hero-badge hero-badge-green">Relatório Institucional</span>
+            <span class="hero-badge">Gestão • Triagem • Destinação</span>
+          </div>
+
+          <h1 class="hero-title">RELATÓRIO DE GESTÃO DE RESÍDUOS</h1>
+          
+          <div class="hero-event-container">
+            <img src="assets/pato-logo.png" alt="58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial 2026" class="hero-event-logo">
+            <div class="hero-event-name">58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial 2026</div>
+          </div>
+
+          <div class="hero-subtitle">Análise Comparativa e Evolução Sustentável</div>
+
+          <div class="hero-authors-box">
+            <div class="author-item">
+              <div class="author-icon">LW</div>
+              <div><strong>Larissa Waskow</strong> — Bióloga</div>
+            </div>
+            <div class="author-item">
+              <div class="author-icon">TA</div>
+              <div><strong>Tatiana de Aguiar</strong> — Engenheira Ambiental</div>
+            </div>
+          </div>
+
+          <div class="hero-meta">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            CentroSul, Florianópolis (SC) • 15 a 18 de setembro de 2026
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="assets/foto-estacao.jpg" alt="Estação de triagem de resíduos - Ecosane" class="hero-image">
+          <div class="hero-image-caption">
+            <strong>Estação Operacional de Triagem de Resíduos</strong> — CentroSul, Florianópolis
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         APRESENTAÇÃO INSTITUCIONAL
+         ========================================================================== -->
+    <section id="apresentacao" class="section-padding">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Contexto e Operação</span>
+          <h2 class="section-title">Apresentação Institucional</h2>
+        </div>
+
+        <div class="presentation-card">
+          <div class="presentation-text">
+            <p>
+              O <strong>58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial</strong>, realizado de 15 a 18 de setembro de 2026, no CentroSul, em Florianópolis (SC), contou com uma estrutura de gestão de resíduos voltada à segregação, triagem, acondicionamento e destinação adequada dos materiais gerados durante as etapas de montagem, realização e desmontagem do evento.
+            </p>
+            <p>
+              A operação foi conduzida com foco na segregação na fonte, recuperação de materiais recicláveis, redução dos impactos ambientais e valorização social dos resíduos, envolvendo ações de orientação, coleta, triagem e encaminhamento dos materiais conforme suas características.
+            </p>
+
+            <div class="highlight-box">
+              Ao longo do evento foram gerados <strong>8.638,01 kg de resíduos</strong>, equivalentes a aproximadamente <strong>8,64 toneladas</strong>.
+            </div>
+
+            <p>
+              O presente relatório apresenta os resultados quantitativos da gestão de resíduos, sua distribuição por categoria e por etapa do evento, além dos principais indicadores ambientais e sociais obtidos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INDICADORES PRINCIPAIS (KPIS)
+         ========================================================================== -->
+    <section id="indicadores" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Métricas de Impacto</span>
+          <h2 class="section-title">Indicadores Principais</h2>
+          <p class="section-desc">Resultados consolidados de geração, reciclagem, valor social e descarbonização.</p>
+        </div>
+
+        <div class="kpi-grid">
+          <!-- Card 1 -->
+          <div class="kpi-card kpi-card-1">
+            <div class="kpi-icon">⚖️</div>
+            <div class="kpi-value counter-val" data-target="8638.01" data-suffix=" kg">0 kg</div>
+            <div class="kpi-label">Resíduos Gerados</div>
+            <div class="kpi-subtext">Equivalente a <strong>8,64 toneladas</strong></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="kpi-card kpi-card-2">
+            <div class="kpi-icon">♻️</div>
+            <div class="kpi-value counter-val" data-target="2072.43" data-suffix=" kg">0 kg</div>
+            <div class="kpi-label">Recicláveis Destinados à Venda</div>
+            <div class="kpi-subtext">23,99% do volume total gerado</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="kpi-card kpi-card-3">
+            <div class="kpi-icon">🌱</div>
+            <div class="kpi-value counter-val" data-target="1284.36" data-prefix="R$ ">R$ 0</div>
+            <div class="kpi-label">Valor Social Gerado</div>
+            <div class="kpi-subtext">Renda revertida à triagem e cooperativas</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="kpi-card kpi-card-4">
+            <div class="kpi-icon">🌍</div>
+            <div class="kpi-value counter-val" data-target="3648.82" data-suffix=" kg">0 kg</div>
+            <div class="kpi-label">Redução Estimada de CO₂e</div>
+            <div class="kpi-subtext" title="Valor exato: 3.648,8163 kg CO₂e">Evitamento de emissões de GEE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DESTINAÇÃO DOS RESÍDUOS
+         ========================================================================== -->
+    <section id="destinacao" class="section-padding">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Encaminhamento Final</span>
+          <h2 class="section-title">Destinação dos Resíduos</h2>
+          <p class="section-desc">Distribuição por categoria de destinação ambiental e socialmente responsável.</p>
+        </div>
+
+        <div class="destination-grid">
+          <div class="chart-card">
+            <div class="chart-wrapper-donut">
+              <canvas id="chartDonut"></canvas>
+            </div>
+          </div>
+
+          <div class="destination-list">
+            <!-- Items alimentados via reportData -->
+            <div class="destination-item">
+              <div class="dest-left">
+                <span class="dest-color-dot" style="background-color: #2E7D32;"></span>
+                <span class="dest-name">Reciclado — Venda</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight">2.072,43 kg</div>
+                <div class="dest-percentage">23,99%</div>
+              </div>
+            </div>
+
+            <div class="destination-item">
+              <div class="dest-left">
+                <span class="dest-color-dot" style="background-color: #81C784;"></span>
+                <span class="dest-name">Reciclado — Doado</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight">1.488,80 kg</div>
+                <div class="dest-percentage">17,24%</div>
+              </div>
+            </div>
+
+            <div class="destination-item">
+              <div class="dest-left">
+                <span class="dest-color-dot" style="background-color: #F57F17;"></span>
+                <span class="dest-name">Orgânico Compostável</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight">202,30 kg</div>
+                <div class="dest-percentage">2,34%</div>
+              </div>
+            </div>
+
+            <div class="destination-item">
+              <div class="dest-left">
+                <span class="dest-color-dot" style="background-color: #0288D1;"></span>
+                <span class="dest-name">Outros Sem Valor Social</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight">248,00 kg</div>
+                <div class="dest-percentage">2,87%</div>
+              </div>
+            </div>
+
+            <div class="destination-item">
+              <div class="dest-left">
+                <span class="dest-color-dot" style="background-color: #E53935;"></span>
+                <span class="dest-name">Rejeito</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight">4.626,48 kg</div>
+                <div class="dest-percentage">53,56%</div>
+              </div>
+            </div>
+
+            <div class="destination-item" style="background-color: var(--primary-green-light); border-color: var(--primary-green);">
+              <div class="dest-left">
+                <span class="dest-name" style="color: var(--primary-green-dark); font-weight: 700;">Total Geral</span>
+              </div>
+              <div class="dest-right">
+                <div class="dest-weight" style="font-size: 1.1rem;">8.638,01 kg</div>
+                <div class="dest-percentage" style="font-weight: 700; color: var(--primary-green-dark);">100,00%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DISTRIBUIÇÃO POR ETAPA
+         ========================================================================== -->
+    <section id="etapas" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Ciclo Operacional</span>
+          <h2 class="section-title">Distribuição por Etapa do Evento</h2>
+          <p class="section-desc">Geração de resíduos registrada nas três fases do congresso.</p>
+        </div>
+
+        <div class="stages-grid">
+          <div class="chart-card">
+            <div style="height: 320px; position: relative;">
+              <canvas id="chartStages"></canvas>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
+              A geração de resíduos foi registrada nas três principais etapas operacionais. A <strong>montagem</strong> concentrou <strong>46,48%</strong> do volume total registrado, seguida pela realização do evento e pela desmontagem.
+            </p>
+
+            <div class="stage-cards-container">
+              <div class="stage-card">
+                <div>
+                  <div class="stage-card-title">1. Montagem</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Montagem de estandes e infraestrutura</div>
+                </div>
+                <div class="stage-card-val">4.014,74 kg <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">(46,48%)</span></div>
+              </div>
+
+              <div class="stage-card">
+                <div>
+                  <div class="stage-card-title">2. Evento</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Realização e atendimento aos congressistas</div>
+                </div>
+                <div class="stage-card-val" style="color: var(--primary-green-dark);">2.523,27 kg <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">(29,21%)</span></div>
+              </div>
+
+              <div class="stage-card">
+                <div>
+                  <div class="stage-card-title">3. Desmontagem</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Retirada de estruturas e desmobilização</div>
+                </div>
+                <div class="stage-card-val" style="color: #7B1FA2;">2.100,00 kg <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">(24,31%)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CARACTERIZAÇÃO DOS RESÍDUOS
+         ========================================================================== -->
+    <section id="caracterizacao" class="section-padding">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Análise Gravimétrica</span>
+          <h2 class="section-title">Caracterização dos Resíduos</h2>
+          <p class="section-desc">Detalhamento ordenado de todas as 15 frações de materiais registrados durante a operação.</p>
+        </div>
+
+        <div class="chart-card-horizontal">
+          <div class="chart-wrapper-horizontal">
+            <canvas id="chartHorizontal"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCAÇÃO AMBIENTAL
+         ========================================================================== -->
+    <section id="educacao" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="media-text-grid">
+          <div>
+            <img src="assets/foto-evento-consciente.jpg" alt="Totem de Educação Ambiental - Este é um Evento Consciente" class="feature-img">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Conscientização & Engajamento</span>
+            <h3>Educação Ambiental</h3>
+            <p>
+              A comunicação visual instalada no evento reforçou as orientações para o descarte correto, apresentando categorias de resíduos e instruções de separação. A sinalização contribuiu para tornar a segregação mais clara aos participantes e às equipes envolvidas.
+            </p>
+            <blockquote style="margin-top: 1.5rem; padding-left: 1rem; border-left: 4px solid var(--primary-green); font-style: italic; color: var(--primary-green-dark); font-weight: 600;">
+              "ESTE É UM EVENTO CONSCIENTE e sustentável! Pequenas atitudes fazem uma grande diferença para o nosso planeta."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ESTAÇÃO DE TRIAGEM
+         ========================================================================== -->
+    <section id="triagem" class="section-padding">
+      <div class="container">
+        <div class="media-text-grid reverse">
+          <div class="feature-content">
+            <span class="section-tag">Infraestrutura Operacional</span>
+            <h3>Estação de Triagem</h3>
+            <p>
+              A estação de triagem foi estruturada para receber os materiais coletados, organizar os resíduos por categoria e apoiar o encaminhamento adequado das diferentes frações.
+            </p>
+
+            <!-- Fluxograma de Processo -->
+            <div class="process-flow">
+              <div class="flow-step"><span>1.</span> Geração</div>
+              <span class="flow-arrow">➔</span>
+              <div class="flow-step"><span>2.</span> Coleta</div>
+              <span class="flow-arrow">➔</span>
+              <div class="flow-step"><span>3.</span> Segregação</div>
+              <span class="flow-arrow">➔</span>
+              <div class="flow-step"><span>4.</span> Triagem</div>
+              <span class="flow-arrow">➔</span>
+              <div class="flow-step"><span>5.</span> Destinação</div>
+            </div>
+          </div>
+
+          <div>
+            <img src="assets/foto-triagem-01.jpg" alt="Estação de triagem operacional com bags organizadas" class="feature-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         GALERIA FOTOGRÁFICA
+         ========================================================================== -->
+    <section id="galeria" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Registros de Campo</span>
+          <h2 class="section-title">Galeria Fotográfica da Operação</h2>
+          <p class="section-desc">Documentação visual das etapas de segregação, triagem, armazenamento e atuação da equipe.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Foto 1 -->
+          <div class="gallery-item" data-caption="Estação de triagem principal com lona institucional Ecosane">
+            <img src="assets/foto-estacao.jpg" alt="Vista geral da estação de triagem" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Vista geral da estação de triagem</div>
+            </div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div class="gallery-item" data-caption="Estação de triagem com bags organizadas por plástico, papel e recicláveis">
+            <img src="assets/foto-triagem-01.jpg" alt="Estação de triagem com materiais segregados" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Triagem e segregação por tipo de material</div>
+            </div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="gallery-item" data-caption="Grande volume de resíduos ensacados prontos para transporte">
+            <img src="assets/foto-residuos-01.jpg" alt="Grande volume de resíduos ensacados" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Volume ensacado para destinação</div>
+            </div>
+          </div>
+
+          <!-- Foto 4 -->
+          <div class="gallery-item" data-caption="Equipe da operação Ecosane atuando na gestão de resíduos">
+            <img src="assets/foto-equipe.jpg" alt="Equipe de operação Ecosane" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Equipe técnica e operacional Ecosane</div>
+            </div>
+          </div>
+
+          <!-- Foto 5 -->
+          <div class="gallery-item" data-caption="Papelão dobrado e fardado pronto para destinação">
+            <img src="assets/foto-papelao.jpg" alt="Papelão separado e fardado" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Papelão reciclável fardado</div>
+            </div>
+          </div>
+
+          <!-- Foto 6 -->
+          <div class="gallery-item" data-caption="Totem informativo de conscientização ambiental para o descarte correto">
+            <img src="assets/foto-evento-consciente.jpg" alt="Totem Evento Consciente" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Sinalização de evento consciente</div>
+            </div>
+          </div>
+
+          <!-- Foto 7 -->
+          <div class="gallery-item" data-caption="Material têxtil e Bagum/PVC recolhido das estruturas temporárias">
+            <img src="assets/foto-bagum.jpg" alt="Material têxtil Bagum/PVC" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">Segregação de Bagum/PVC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Lightbox -->
+    <div id="lightboxModal" class="lightbox-modal">
+      <div class="lightbox-content">
+        <button id="lightboxClose" class="lightbox-close">&times;</button>
+        <img id="lightboxImg" src="" alt="" class="lightbox-img">
+        <div id="lightboxCaption" class="lightbox-caption-text"></div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         EQUIPE E OPERAÇÃO
+         ========================================================================== -->
+    <section id="equipe" class="section-padding">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Responsabilidade Técnica</span>
+          <h2 class="section-title">Equipe e Operação</h2>
+        </div>
+
+        <div class="team-card">
+          <div class="team-grid">
+            <div>
+              <img src="assets/foto-equipe.jpg" alt="Equipe Ecosane em campo" class="team-photo">
+            </div>
+            <div>
+              <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
+                A gestão dos resíduos contou com equipe dedicada à organização da coleta, segregação, triagem e acondicionamento dos materiais. O registro fotográfico evidencia a atuação conjunta da equipe durante a operação.
+              </p>
+
+              <div class="team-specs">
+                <div class="team-person">
+                  <div>
+                    <div class="person-name">Larissa Waskow</div>
+                    <div class="person-role">Bióloga • Responsável Técnica</div>
+                  </div>
+                </div>
+
+                <div class="team-person">
+                  <div>
+                    <div class="person-name">Tatiana de Aguiar</div>
+                    <div class="person-role">Engenheira Ambiental • Responsável Técnica</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ANÁLISE COMPARATIVA E EVOLUÇÃO SUSTENTÁVEL
+         ========================================================================== -->
+    <section id="impacto" class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Consolidação de Dados</span>
+          <h2 class="section-title">Análise Comparativa e Evolução Sustentável</h2>
+        </div>
+
+        <div class="consolidation-card">
+          <h3 style="font-size: 1.25rem; color: var(--primary-green-dark); margin-bottom: 0.5rem;">Resultados Consolidados — 2026</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Sumário oficial de todos os vetores de destinação e métricas socioambientais do congresso.</p>
+
+          <div class="consolidation-grid">
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Resíduos Totais Gerados</div>
+              <div class="consolidation-item-val">8.638,01 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Recicláveis para Venda</div>
+              <div class="consolidation-item-val">2.072,43 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Recicláveis Doados</div>
+              <div class="consolidation-item-val">1.488,80 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Matéria Orgânica Compostável</div>
+              <div class="consolidation-item-val">202,30 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Outros sem Valor Social</div>
+              <div class="consolidation-item-val">248,00 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Volume de Rejeito</div>
+              <div class="consolidation-item-val" style="color: #E53935;">4.626,48 kg</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Valor Social Gerado</div>
+              <div class="consolidation-item-val" style="color: #F57F17;">R$ 1.284,36</div>
+            </div>
+
+            <div class="consolidation-item">
+              <div class="consolidation-item-title">Redução Estimada de CO₂e</div>
+              <div class="consolidation-item-val" style="color: #7B1FA2;">3.648,82 kg</div>
+            </div>
+          </div>
+
+          <div class="methodological-note">
+            <div class="note-icon">ℹ️</div>
+            <div>
+              <strong>Nota Metodológica:</strong> A comparação histórica entre edições deve utilizar os mesmos critérios de pesagem, classificação e contabilização. Os dados históricos não devem ser estimados ou preenchidos sem fonte documental.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         RECOMENDAÇÕES
+         ========================================================================== -->
+    <section id="recomendacoes" class="section-padding">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-tag">Melhoria Contínua</span>
+          <h2 class="section-title">Recomendações para Futuras Edições</h2>
+          <p class="section-desc">Diretrizes estratégicas elaboradas pela equipe técnica para otimização da gestão de resíduos.</p>
+        </div>
+
+        <div class="recommendations-grid">
+          <!-- Rec 01 -->
+          <div class="rec-card">
+            <div class="rec-number">01</div>
+            <h3 class="rec-title">Redução na Fonte</h3>
+            <p class="rec-desc">
+              Priorizar materiais reutilizáveis e reduzir o uso de itens descartáveis nas etapas de montagem e desmontagem.
+            </p>
+          </div>
+
+          <!-- Rec 02 -->
+          <div class="rec-card">
+            <div class="rec-number">02</div>
+            <h3 class="rec-title">Planejamento da Montagem</h3>
+            <p class="rec-desc">
+              Considerar que a montagem representou <strong>46,48%</strong> do volume total registrado e avaliar previamente materiais de embalagem, estruturas e elementos temporários.
+            </p>
+          </div>
+
+          <!-- Rec 03 -->
+          <div class="rec-card">
+            <div class="rec-number">03</div>
+            <h3 class="rec-title">Segregação Eficiente</h3>
+            <p class="rec-desc">
+              Manter e ampliar a sinalização dos pontos de descarte, reforçando a identificação visual clara de todas as categorias.
+            </p>
+          </div>
+
+          <!-- Rec 04 -->
+          <div class="rec-card">
+            <div class="rec-number">04</div>
+            <h3 class="rec-title">Materiais de Grande Volume</h3>
+            <p class="rec-desc">
+              Avaliar estratégias específicas para madeira, Bagum/PVC, rejeitos e outros materiais com maior participação na massa total.
+            </p>
+          </div>
+
+          <!-- Rec 05 -->
+          <div class="rec-card">
+            <div class="rec-number">05</div>
+            <h3 class="rec-title">Monitoramento e Métricas</h3>
+            <p class="rec-desc">
+              Manter a pesagem segregada por etapa e categoria para permitir análises comparativas sólidas entre futuras edições.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONCLUSÃO
+         ========================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="conclusion-card">
+          <h2>Conclusão</h2>
+          <p>
+            A gestão de resíduos do <strong>58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial 2026</strong> resultou na contabilização de <strong>8.638,01 kg de resíduos</strong>. A operação envolveu segregação, triagem e encaminhamento de diferentes materiais, com recuperação de recicláveis, destinação de matéria orgânica e registro de valor social e redução estimada de CO₂e.
+          </p>
+          <p style="margin-top: 1rem;">
+            Os resultados consolidados oferecem uma base objetiva para o acompanhamento e o aprimoramento da gestão de resíduos em futuras edições.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       RODAPÉ INSTITUCIONAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h4>ECOSANE Projetos Ambientais</h4>
+          <p>Soluções sustentáveis e gestão ambiental de grandes eventos.</p>
+        </div>
+        <div class="footer-meta">
+          <p><strong>Relatório de Gestão de Resíduos — 2026</strong></p>
+          <p>58º Congresso Brasileiro de Patologia Clínica / Medicina Laboratorial</p>
+          <p>Florianópolis — SC | Setembro de 2026</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ECOSANE Projetos Ambientais. Todos os direitos reservados.</div>
+        <div id="validation-status" class="validation-badge">
+          ✓ Dados validados matematicamente
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

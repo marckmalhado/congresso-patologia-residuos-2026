@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <g transform="translate(10, 10)">
+    <!-- Leaf / Eco Emblem -->
+    <path d="M 25 5 C 40 5 50 20 45 35 C 40 50 20 55 10 45 C 5 40 5 25 15 15 Z" fill="#4CAF50" opacity="0.95"/>
+    <path d="M 30 12 C 45 15 50 30 42 42 C 32 52 15 42 18 28 Z" fill="#81C784"/>
+    <path d="M 20 30 Q 30 20 42 12" stroke="#1B5E20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Stalks -->
+    <path d="M 12 45 Q 8 55 5 60" stroke="#2E7D32" stroke-width="2.5" fill="none"/>
+    <path d="M 16 48 Q 22 55 26 62" stroke="#2E7D32" stroke-width="2" fill="none"/>
+    
+    <!-- Text: ecosane -->
+    <text x="65" y="40" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="34" fill="#2E7D32" letter-spacing="-0.5">ecosane</text>
+    <text x="66" y="56" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="500" font-size="13" fill="#558B2F" letter-spacing="1.5">projetos ambientais</text>
+  </g>
+</svg>

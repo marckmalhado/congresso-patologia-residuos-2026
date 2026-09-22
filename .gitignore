@@ -1,0 +1,19 @@
+# Arquivos originais de trabalho (não fazem parte do projeto web)
+613e9610-ea9b-4cae-8c4a-67cfb03b0e1d.jpg
+6e2b39aa-c636-4a32-9af5-c26f65418b0b.jpg
+70e9f2a1-15d0-4d3b-ac1f-e3ff77fb3fad.jpg
+76d06866-0391-444b-983e-2b52114326d4.jpg
+b6ae3058-3042-4058-8899-0062f3e0938b.jpg
+e87dd998-c3aa-4ac6-9dca-ce48a6835a8c.jpg
+ee228c5b-3e5b-4782-908b-cc3496051218.jpg
+
+# Prompt de geração
+Prompt_Codex_Relatorio_Gestao_Residuos_2026.md
+
+# PDF gerado localmente
+*.pdf
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

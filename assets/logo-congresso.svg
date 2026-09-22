@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" width="380" height="80">
+  <g transform="translate(5, 8)">
+    <!-- Badge / Icon -->
+    <rect x="5" y="5" width="54" height="54" rx="14" fill="url(#grad-cbpc)" />
+    <path d="M 22 20 C 22 17 42 17 42 20 C 42 28 22 36 22 44 C 22 47 42 47 42 44" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="22" cy="20" r="3.5" fill="#64B5F6"/>
+    <circle cx="42" cy="20" r="3.5" fill="#81C784"/>
+    <circle cx="32" cy="32" r="4" fill="#FFFFFF"/>
+    <circle cx="22" cy="44" r="3.5" fill="#81C784"/>
+    <circle cx="42" cy="44" r="3.5" fill="#64B5F6"/>
+
+    <!-- Gradients -->
+    <defs>
+      <linearGradient id="grad-cbpc" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0288D1"/>
+        <stop offset="100%" stop-color="#2E7D32"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Text -->
+    <text x="70" y="24" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="20" fill="#01579B">58º CONGRESSO BRASILEIRO</text>
+    <text x="70" y="42" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#37474F">Patologia Clínica / Medicina Laboratorial</text>
+    <text x="70" y="58" font-family="'Outfit', sans-serif" font-weight="700" font-size="14" fill="#2E7D32" letter-spacing="1">FLORIANÓPOLIS 2026</text>
+  </g>
+</svg>
