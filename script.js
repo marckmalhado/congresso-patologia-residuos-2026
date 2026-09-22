@@ -45,21 +45,21 @@ const reportData = {
   ],
 
   wasteTypes: [
-    { name: "Madeira", value: 1823.13 },
-    { name: "Rejeito", value: 1494.61 },
-    { name: "Bagum/PVC", value: 1488.80 },
-    { name: "WC", value: 1104.92 },
-    { name: "Misto", value: 824.71 },
-    { name: "Papel/papelão", value: 799.69 },
-    { name: "Plástico", value: 253.03 },
-    { name: "Ferro", value: 248.00 },
-    { name: "Compostável", value: 202.30 },
-    { name: "Carpê", value: 198.87 },
-    { name: "Vidro", value: 74.45 },
-    { name: "Copinho", value: 52.15 },
-    { name: "Metal", value: 36.30 },
-    { name: "PET", value: 32.10 },
-    { name: "Isopor", value: 4.95 }
+    { name: "Madeira", value: 1823.13, type: "Reciclável" },
+    { name: "Rejeito", value: 1494.61, type: "Rejeito" },
+    { name: "Bagum/PVC", value: 1488.80, type: "Reciclável" },
+    { name: "WC", value: 1104.92, type: "Rejeito" },
+    { name: "Misto", value: 824.71, type: "Rejeito" },
+    { name: "Papel/papelão", value: 799.69, type: "Reciclável" },
+    { name: "Plástico", value: 253.03, type: "Reciclável" },
+    { name: "Ferro", value: 248.00, type: "Reciclável" },
+    { name: "Compostável", value: 202.30, type: "Orgânico" },
+    { name: "Carpê", value: 198.87, type: "Reciclável" },
+    { name: "Vidro", value: 74.45, type: "Reciclável" },
+    { name: "Copinho", value: 52.15, type: "Reciclável" },
+    { name: "Metal", value: 36.30, type: "Reciclável" },
+    { name: "PET", value: 32.10, type: "Reciclável" },
+    { name: "Isopor", value: 4.95, type: "Reciclável" }
   ]
 };
 
@@ -238,24 +238,67 @@ function initCharts() {
   if (ctxHorizontal) {
     const totalMass = reportData.totals.generated;
 
+    // Cores por tipo de material
+    const typeColors = {
+      "Reciclável": "#2E7D32",
+      "Rejeito": "#E53935",
+      "Orgânico": "#F57F17"
+    };
+
+    // Labels incluindo tipo do material
+    const labelsWithType = reportData.wasteTypes.map(w => `${w.name} (${w.type})`);
+    const barColors = reportData.wasteTypes.map(w => typeColors[w.type] || "#0288D1");
+
+    // Plugin inline para exibir valores sobre as barras
+    const datalabelsPlugin = {
+      id: "horizontalDatalabels",
+      afterDatasetsDraw(chart) {
+        const { ctx } = chart;
+        chart.data.datasets.forEach((dataset, dsIdx) => {
+          const meta = chart.getDatasetMeta(dsIdx);
+          meta.data.forEach((bar, index) => {
+            const value = dataset.data[index];
+            const pct = ((value / totalMass) * 100).toFixed(1);
+            const label = `${value.toLocaleString("pt-BR", { minimumFractionDigits: 2 })} kg (${pct}%)`;
+
+            ctx.save();
+            ctx.font = "bold 11px 'Inter', sans-serif";
+            ctx.textBaseline = "middle";
+
+            const barWidth = bar.width;
+            const textWidth = ctx.measureText(label).width;
+
+            // Se a barra for larga o suficiente, texto dentro; senão, fora
+            if (barWidth > textWidth + 20) {
+              ctx.fillStyle = "#FFFFFF";
+              ctx.textAlign = "right";
+              ctx.fillText(label, bar.x - 8, bar.y);
+            } else {
+              ctx.fillStyle = "#334155";
+              ctx.textAlign = "left";
+              ctx.fillText(label, bar.x + 6, bar.y);
+            }
+            ctx.restore();
+          });
+        });
+      }
+    };
+
     new Chart(ctxHorizontal, {
       type: "bar",
-      indexAxis: "y",
+      plugins: [datalabelsPlugin],
       data: {
-        labels: reportData.wasteTypes.map(w => w.name),
+        labels: labelsWithType,
         datasets: [{
           label: "Massa (kg)",
           data: reportData.wasteTypes.map(w => w.value),
-          backgroundColor: function(context) {
-            // Gradiente verde/azul baseado na posição
-            const index = context.dataIndex;
-            return index < 3 ? "#2E7D32" : (index < 7 ? "#0288D1" : "#81C784");
-          },
+          backgroundColor: barColors,
           borderRadius: 6,
-          barThickness: 18
+          barThickness: 22
         }]
       },
       options: {
+        indexAxis: "y",
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -266,7 +309,7 @@ function initCharts() {
                 const item = reportData.wasteTypes[context.dataIndex];
                 const pct = ((item.value / totalMass) * 100).toFixed(2);
                 const valFormatted = item.value.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
-                return ` ${item.name}: ${valFormatted} kg (${pct}% do total)`;
+                return ` ${item.name} (${item.type}): ${valFormatted} kg (${pct}% do total)`;
               }
             }
           }
@@ -279,10 +322,20 @@ function initCharts() {
               callback: function(val) {
                 return val.toLocaleString("pt-BR") + " kg";
               }
+            },
+            title: {
+              display: true,
+              text: "Massa (kg)",
+              font: { size: 13, weight: "600", family: "'Inter', sans-serif" },
+              color: "#475569"
             }
           },
           y: {
-            grid: { display: false }
+            grid: { display: false },
+            ticks: {
+              font: { size: 12, weight: "500", family: "'Inter', sans-serif" },
+              color: "#334155"
+            }
           }
         }
       }
